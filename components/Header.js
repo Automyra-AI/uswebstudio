@@ -11,10 +11,15 @@ export default function Header() {
       <div className="container-x flex items-center justify-between py-6">
         <Logo />
 
-        <nav className="hidden lg:flex items-center gap-12 text-white/95 text-base font-medium">
+        <nav className="hidden lg:flex items-center gap-7 xl:gap-9 text-white/95 text-sm xl:text-base font-medium">
           <a href="/services" className="hover:text-brand-red transition">Services</a>
+          <a href="/platforms" className="hover:text-brand-red transition">Platforms</a>
+          <a href="/amazon" className="hover:text-brand-red transition">Amazon</a>
+          <a href="/industries" className="hover:text-brand-red transition">Industries</a>
+          <a href="/locations" className="hover:text-brand-red transition">Locations</a>
           <a href="/projects" className="hover:text-brand-red transition">Projects</a>
-          <a href="/about" className="hover:text-brand-red transition">About Us</a>
+          <a href="/blog" className="hover:text-brand-red transition">Blog</a>
+          <a href="/about" className="hover:text-brand-red transition">About</a>
         </nav>
 
         <a
@@ -37,7 +42,13 @@ export default function Header() {
         <div className="lg:hidden bg-navy-900/95 backdrop-blur-sm border-t border-white/10">
           <div className="container-x flex flex-col gap-4 py-6">
             <a href="/services" onClick={() => setOpen(false)}>Services</a>
+            <a href="/platforms" onClick={() => setOpen(false)}>Platforms</a>
+            <a href="/amazon" onClick={() => setOpen(false)}>Amazon</a>
+            <a href="/industries" onClick={() => setOpen(false)}>Industries</a>
+            <a href="/locations" onClick={() => setOpen(false)}>Locations</a>
             <a href="/projects" onClick={() => setOpen(false)}>Projects</a>
+            <a href="/blog" onClick={() => setOpen(false)}>Blog</a>
+            <a href="/reviews" onClick={() => setOpen(false)}>Reviews</a>
             <a href="/about" onClick={() => setOpen(false)}>About Us</a>
             <a
               href="/contact"
