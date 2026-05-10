@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Logo({ className = "" }) {
   return (
-    <a href="#" className={`flex items-center gap-3 ${className}`}>
+    <Link href="/" aria-label="US Web Studio — Home" className={`flex items-center gap-3 ${className}`}>
       <svg viewBox="0 0 40 44" width="40" height="44" aria-hidden="true">
         <polygon
           points="20,2 38,12 38,32 20,42 2,32 2,12"
@@ -19,6 +21,6 @@ export default function Logo({ className = "" }) {
           STUDIO
         </span>
       </span>
-    </a>
+    </Link>
   );
 }

@@ -5,6 +5,9 @@ import Footer from "@/components/Footer";
 import HexIcon from "@/components/HexIcon";
 import FAQ from "@/components/FAQ";
 import ContactSection from "@/components/ContactSection";
+import Reveal from "@/components/Reveal";
+import TiltCard from "@/components/TiltCard";
+import Magnetic from "@/components/Magnetic";
 import {
   AMAZON_SERVICES,
   getAmazonBySlug,
@@ -34,10 +37,10 @@ export default function AmazonSlugPage({ params }) {
     <main className="relative">
       <Header />
 
-      <section className="relative overflow-hidden bg-navy-950 pt-36 pb-24 lg:pt-44 lg:pb-32">
+      <section className="relative overflow-hidden bg-navy-950 pt-32 sm:pt-36 pb-20 sm:pb-24 lg:pt-44 lg:pb-32">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-40 top-10 w-[700px] h-[700px] rounded-full"
+          className="pointer-events-none absolute -right-40 top-10 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full animate-float-slow"
           style={{
             background:
               "radial-gradient(circle, #e11d2a 0%, #5a0a12 40%, transparent 75%)",
@@ -47,55 +50,85 @@ export default function AmazonSlugPage({ params }) {
         />
 
         <div className="container-x relative z-10 max-w-4xl">
-          <Link
-            href="/amazon"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm mb-6"
-          >
-            <i className="fa-solid fa-arrow-left" /> All Amazon services
-          </Link>
+          <Reveal variant="fade" duration={500}>
+            <Link
+              href="/amazon"
+              className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm mb-5 sm:mb-6 group"
+            >
+              <i className="fa-solid fa-arrow-left transition-transform group-hover:-translate-x-1" />
+              All Amazon services
+            </Link>
+          </Reveal>
 
-          <div className="flex items-center gap-3 mb-6">
-            <HexIcon size={28} />
-            <span className="text-sm font-bold tracking-[0.25em] text-white/90">
-              AMAZON SERVICE
-            </span>
-          </div>
+          <Reveal variant="up" delay={50} duration={600}>
+            <div className="flex items-center gap-3 mb-5 sm:mb-6">
+              <span className="animate-spin-slow inline-block">
+                <HexIcon size={28} />
+              </span>
+              <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-white/90">
+                AMAZON SERVICE
+              </span>
+            </div>
+          </Reveal>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05]">
-            {s.name}
-          </h1>
-          <p className="mt-6 text-xl lg:text-2xl text-white/85 max-w-2xl">
-            {s.tagline}
-          </p>
-          <Link
-            href="/contact"
-            className="mt-10 inline-flex items-center gap-2 bg-white text-navy-900 px-8 py-4 rounded-full font-semibold hover:bg-brand-red hover:text-white transition"
-          >
-            Get a Free Consultation <i className="fa-solid fa-arrow-right" />
-          </Link>
+          <Reveal variant="up" delay={150} duration={800}>
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-[1.05]">
+              {s.name}
+            </h1>
+          </Reveal>
+
+          <Reveal variant="up" delay={280} duration={700}>
+            <p className="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl text-white/85 max-w-2xl">
+              {s.tagline}
+            </p>
+          </Reveal>
+
+          <Reveal variant="up" delay={400} duration={700}>
+            <Magnetic strength={0.35}>
+              <Link
+                href="/contact"
+                className="mt-8 sm:mt-10 inline-flex items-center gap-2 bg-white text-navy-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold relative overflow-hidden group/btn"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-brand-red translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"
+                />
+                <span className="relative z-10 group-hover/btn:text-white transition-colors">
+                  Get a Free Consultation
+                </span>
+                <i className="fa-solid fa-arrow-right relative z-10 group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all" />
+              </Link>
+            </Magnetic>
+          </Reveal>
         </div>
       </section>
 
-      <section className="bg-[#f5f7fb] text-navy-900 py-20 lg:py-28">
-        <div className="container-x grid lg:grid-cols-2 gap-12">
-          <div>
+      <section className="bg-[#f5f7fb] text-navy-900 py-16 sm:py-20 lg:py-28">
+        <div className="container-x grid lg:grid-cols-2 gap-8 sm:gap-12">
+          <Reveal variant="left" duration={700}>
             <p className="text-brand-red font-semibold">Overview</p>
-            <h2 className="mt-3 text-3xl lg:text-5xl font-bold leading-[1.1]">
-              How we approach {s.name.toLowerCase()}.
+            <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-5xl font-bold leading-[1.1]">
+              How we approach{" "}
+              <span className="bg-gradient-to-r from-navy-900 via-brand-red to-navy-900 bg-clip-text text-transparent animate-gradient">
+                {s.name.toLowerCase()}
+              </span>
+              .
             </h2>
-          </div>
-          <div className="space-y-5 text-navy-900/75 leading-relaxed text-base lg:text-lg">
+          </Reveal>
+          <div className="space-y-4 sm:space-y-5 text-navy-900/75 leading-relaxed text-sm sm:text-base lg:text-lg">
             {s.long.map((p, i) => (
-              <p key={i}>{p}</p>
+              <Reveal key={i} variant="right" delay={i * 120} duration={700}>
+                <p>{p}</p>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-navy-950 text-white py-20 lg:py-28 relative overflow-hidden">
+      <section className="bg-navy-950 text-white py-16 sm:py-20 lg:py-28 relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -left-40 -bottom-32 w-[600px] h-[600px] rounded-full"
+          className="pointer-events-none absolute -left-40 -bottom-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] rounded-full animate-float-slow-reverse"
           style={{
             background:
               "radial-gradient(circle, #e11d2a 0%, #5a0a12 40%, transparent 75%)",
@@ -105,27 +138,34 @@ export default function AmazonSlugPage({ params }) {
         />
         <div className="container-x relative">
           <div className="max-w-3xl">
-            <p className="text-white/70 font-semibold tracking-[0.25em] text-sm">
-              WHAT IS INCLUDED
-            </p>
-            <h2 className="mt-3 text-3xl lg:text-5xl font-bold leading-[1.1]">
-              Capabilities and deliverables.
-            </h2>
+            <Reveal variant="up" duration={600}>
+              <p className="text-white/70 font-semibold tracking-[0.25em] text-xs sm:text-sm">
+                WHAT IS INCLUDED
+              </p>
+            </Reveal>
+            <Reveal variant="up" delay={120} duration={700}>
+              <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-5xl font-bold leading-[1.1]">
+                Capabilities and deliverables.
+              </h2>
+            </Reveal>
           </div>
 
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {s.features.map((f) => (
-              <div
-                key={f}
-                className="rounded-2xl p-[1px] bg-gradient-to-b from-white/30 via-white/10 to-transparent"
-              >
-                <div className="rounded-[15px] h-full p-6 bg-gradient-to-b from-[#0e2a55] via-navy-800 to-navy-900 flex items-start gap-3">
-                  <span className="mt-1 inline-flex w-8 h-8 rounded-full bg-brand-red items-center justify-center shrink-0">
-                    <i className="fa-solid fa-check text-sm" />
-                  </span>
-                  <span className="text-white/90 leading-snug">{f}</span>
-                </div>
-              </div>
+          <div className="mt-10 sm:mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            {s.features.map((f, i) => (
+              <Reveal key={f} variant="zoom" delay={i * 100} duration={600}>
+                <TiltCard max={6} scale={1.02} className="h-full">
+                  <div className="rounded-2xl p-[1px] bg-gradient-to-b from-white/30 via-white/10 to-transparent hover:from-brand-red/60 transition-all duration-300 group h-full">
+                    <div className="rounded-[15px] h-full p-5 sm:p-6 bg-gradient-to-b from-[#0e2a55] via-navy-800 to-navy-900 flex items-start gap-3">
+                      <span className="mt-1 inline-flex w-8 h-8 rounded-full bg-brand-red items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+                        <i className="fa-solid fa-check text-sm" />
+                      </span>
+                      <span className="text-white/90 leading-snug text-sm sm:text-base">
+                        {f}
+                      </span>
+                    </div>
+                  </div>
+                </TiltCard>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -133,25 +173,28 @@ export default function AmazonSlugPage({ params }) {
 
       <FAQ title={`${s.name} questions, answered.`} />
 
-      <section className="bg-white text-navy-900 py-20 lg:py-24">
+      <section className="bg-white text-navy-900 py-16 sm:py-20 lg:py-24">
         <div className="container-x">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-10">
-            Other Amazon services
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {others.map((o) => (
-              <Link
-                key={o.slug}
-                href={`/amazon/${o.slug}`}
-                className="group block rounded-2xl border border-navy-900/10 bg-white p-6 hover:border-brand-red transition"
-              >
-                <h3 className="text-lg font-bold text-navy-900 group-hover:text-brand-red transition">
-                  {o.name}
-                </h3>
-                <p className="mt-2 text-sm text-navy-900/65 line-clamp-3">
-                  {o.tagline}
-                </p>
-              </Link>
+          <Reveal variant="up" duration={600}>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-10">
+              Other Amazon services
+            </h2>
+          </Reveal>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {others.map((o, i) => (
+              <Reveal key={o.slug} variant="up" delay={i * 100} duration={600}>
+                <Link
+                  href={`/amazon/${o.slug}`}
+                  className="group block rounded-2xl border border-navy-900/10 bg-white p-5 sm:p-6 hover:border-brand-red hover:-translate-y-1 hover:shadow-lg transition-all duration-300 h-full"
+                >
+                  <h3 className="text-base sm:text-lg font-bold text-navy-900 group-hover:text-brand-red transition">
+                    {o.name}
+                  </h3>
+                  <p className="mt-2 text-xs sm:text-sm text-navy-900/65 line-clamp-3">
+                    {o.tagline}
+                  </p>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -1,4 +1,7 @@
 import HexIcon from "./HexIcon";
+import Reveal from "./Reveal";
+import TiltCard from "./TiltCard";
+import Magnetic from "./Magnetic";
 
 const PROJECTS = [
   {
@@ -39,12 +42,12 @@ export default function Work() {
   return (
     <section
       id="projects"
-      className="relative bg-navy-950 py-20 lg:py-28 overflow-hidden"
+      className="relative bg-navy-950 py-16 sm:py-20 lg:py-28 overflow-hidden"
     >
       {/* big red sphere blob */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[-25%] top-[12%] w-[1100px] h-[1100px] rounded-full"
+        className="pointer-events-none absolute right-[-25%] top-[12%] w-[700px] sm:w-[1100px] h-[700px] sm:h-[1100px] rounded-full animate-float-slow"
         style={{
           background:
             "radial-gradient(circle at 35% 50%, #e11d2a 0%, #8a0e18 40%, #2b0814 65%, transparent 80%)",
@@ -60,69 +63,86 @@ export default function Work() {
       />
 
       <div className="container-x relative z-20">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14 mt-4">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 mb-10 sm:mb-14 mt-4">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <HexIcon size={28} />
-              <span className="text-sm font-bold tracking-[0.25em] text-white/90">
-                OUR WORK
-              </span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-              Work That Drive Results
-            </h2>
+            <Reveal variant="up" duration={600}>
+              <div className="flex items-center gap-3 mb-4">
+                <HexIcon size={28} />
+                <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-white/90">
+                  OUR WORK
+                </span>
+              </div>
+            </Reveal>
+            <Reveal variant="up" delay={120} duration={750}>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                Work That{" "}
+                <span className="bg-gradient-to-r from-white via-brand-red to-white bg-clip-text text-transparent animate-gradient">
+                  Drive Results
+                </span>
+              </h2>
+            </Reveal>
           </div>
 
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 bg-white text-navy-900 px-7 py-3 rounded-full font-semibold hover:bg-brand-red hover:text-white transition self-start"
-          >
-            View All Work <i className="fa-solid fa-arrow-right" />
-          </a>
+          <Reveal variant="up" delay={250} duration={650}>
+            <Magnetic strength={0.3}>
+              <a
+                href="/projects"
+                className="inline-flex items-center gap-2 bg-white text-navy-900 px-6 sm:px-7 py-3 rounded-full font-semibold hover:bg-brand-red hover:text-white transition self-start group/btn"
+              >
+                View All Work
+                <i className="fa-solid fa-arrow-right transition-transform group-hover/btn:translate-x-1" />
+              </a>
+            </Magnetic>
+          </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-7">
-          {PROJECTS.map((p) => (
-            <article
-              key={p.title}
-              className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-[#0e2a55] via-navy-800 to-navy-900 p-5 lg:p-6 overflow-hidden"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,260px)_1fr] gap-5">
-                <div className="rounded-2xl overflow-hidden aspect-[4/5] md:aspect-auto md:h-[280px] bg-black/40">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+        <div className="grid sm:grid-cols-2 gap-5 sm:gap-7">
+          {PROJECTS.map((p, i) => (
+            <Reveal key={p.title} variant="up" delay={i * 120} duration={700}>
+              <TiltCard max={4} scale={1.01} className="h-full">
+                <article className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-[#0e2a55] via-navy-800 to-navy-900 p-4 sm:p-5 lg:p-6 overflow-hidden hover:border-brand-red/50 transition-all duration-500 h-full group/card">
+                  <div className="grid grid-cols-1 md:grid-cols-[minmax(0,200px)_1fr] lg:grid-cols-[minmax(0,260px)_1fr] gap-4 sm:gap-5">
+                    <div className="rounded-2xl overflow-hidden aspect-[4/3] md:aspect-auto md:h-[260px] lg:h-[280px] bg-black/40 relative">
+                      <img
+                        src={p.image}
+                        alt={p.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                      />
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-white/15 to-transparent translate-x-[-100%] group-hover/card:translate-x-[100%] transition-transform duration-[1500ms]"
+                      />
+                    </div>
 
-                <div className="flex flex-col">
-                  <h3 className="text-xl lg:text-2xl font-semibold leading-snug border-b border-white/15 pb-3">
-                    {p.title}
-                  </h3>
+                    <div className="flex flex-col">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold leading-snug border-b border-white/15 pb-3 group-hover/card:text-brand-red transition-colors">
+                        {p.title}
+                      </h3>
 
-                  {p.heading && (
-                    <h4 className="mt-4 text-lg lg:text-xl font-semibold text-white">
-                      {p.heading}
-                    </h4>
-                  )}
+                      {p.heading && (
+                        <h4 className="mt-4 text-base sm:text-lg lg:text-xl font-semibold text-white">
+                          {p.heading}
+                        </h4>
+                      )}
 
-                  <p className="mt-3 text-white/75 leading-relaxed text-sm lg:text-base">
-                    {p.body}
-                  </p>
+                      <p className="mt-3 text-white/75 leading-relaxed text-xs sm:text-sm lg:text-base">
+                        {p.body}
+                      </p>
 
-                  <div className="mt-auto pt-6 flex justify-end">
-                    <a
-                      href="#"
-                      aria-label={`View ${p.title}`}
-                      className="w-12 h-12 rounded-full bg-white text-navy-900 flex items-center justify-center hover:bg-brand-red hover:text-white transition shadow-lg"
-                    >
-                      <i className="fa-solid fa-arrow-up-right-from-square text-sm" />
-                    </a>
+                      <div className="mt-auto pt-5 sm:pt-6 flex justify-end">
+                        <a
+                          href="/projects"
+                          aria-label={`View ${p.title}`}
+                          className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-navy-900 flex items-center justify-center hover:bg-brand-red hover:text-white transition-all duration-300 hover:scale-110 hover:rotate-45 shadow-lg"
+                        >
+                          <i className="fa-solid fa-arrow-up-right-from-square text-sm" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </article>
+                </article>
+              </TiltCard>
+            </Reveal>
           ))}
         </div>
       </div>
