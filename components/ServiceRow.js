@@ -1,12 +1,8 @@
 import Reveal from "./Reveal";
 
-export default function ServiceRow({ service, variant = "red" }) {
-  const isRed = variant === "red";
-  const bg = isRed ? "bg-brand-red" : "bg-navy-950";
-  const arrowBg = "bg-white text-navy-900";
-
+export default function ServiceRow({ service }) {
   return (
-    <section className={`${bg} relative text-white group/row overflow-hidden`}>
+    <section className="relative text-white group/row overflow-hidden bg-navy-950 hover:bg-brand-red transition-colors duration-500">
       {/* Subtle hover sheen */}
       <div
         aria-hidden="true"
@@ -54,7 +50,7 @@ export default function ServiceRow({ service, variant = "red" }) {
             <a
               href={service.href || "#"}
               aria-label={`Open ${service.title}`}
-              className={`absolute right-0 -bottom-2 w-12 h-12 rounded-full ${arrowBg} flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 hover:rotate-45 hover:bg-navy-900 hover:text-white`}
+              className="absolute right-0 -bottom-2 w-12 h-12 rounded-full bg-white text-navy-900 flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 hover:rotate-45 group-hover/row:bg-navy-900 group-hover/row:text-white"
             >
               <i className="fa-solid fa-arrow-up-right-from-square text-sm" />
             </a>
