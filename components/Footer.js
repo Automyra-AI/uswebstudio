@@ -143,24 +143,24 @@ export default function Footer() {
           <a href="/" className="flex items-center gap-3">
             <span className="relative inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-brand-red">
               <span className="text-brand-red font-extrabold text-lg tracking-tight">
-                US
+                AL
               </span>
             </span>
             <span className="leading-tight">
-              <span className="block text-[10px] font-bold tracking-[0.25em] text-navy-900">
-                WEB
+              <span className="block text-base font-extrabold tracking-tight text-navy-900">
+                Advertising<span className="text-brand-red">Lab</span>
               </span>
-              <span className="block text-[10px] font-bold tracking-[0.25em] text-navy-900">
-                STUDIO
+              <span className="block text-[9px] font-bold tracking-[0.25em] text-navy-900/70">
+                GROW · CONVERT · SCALE
               </span>
             </span>
           </a>
 
           <a
-            href="mailto:support@uswebstudio.com"
+            href="mailto:hello@advertisinglab.com"
             className="text-navy-900/80 font-medium hover:text-brand-red transition"
           >
-            support@uswebstudio.com
+            hello@advertisinglab.com
           </a>
 
           <div className="flex items-center gap-3">
@@ -185,7 +185,7 @@ export default function Footer() {
       {/* legal strip */}
       <div className="border-t border-navy-900/10">
         <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-900/60">
-          <p>© 2026 US Web Studio. All rights reserved.</p>
+          <p>© 2026 AdvertisingLab. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <a href="#" className="hover:text-brand-red transition">Terms of Use</a>
             <a href="#" className="hover:text-brand-red transition">Privacy Policy</a>

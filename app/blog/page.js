@@ -9,9 +9,9 @@ import TiltCard from "@/components/TiltCard";
 import { POSTS, formatDate } from "@/lib/blog-data";
 
 export const metadata = {
-  title: "Blog — US Web Studio",
+  title: "Blog — AdvertisingLab",
   description:
-    "Insights on ecommerce, AI search, paid media, and growth — from the team at US Web Studio.",
+    "Insights on ecommerce, AI search, paid media, and growth — from the team at AdvertisingLab.",
 };
 
 export default function BlogIndexPage() {

@@ -9,7 +9,7 @@ import CountUp from "@/components/CountUp";
 import Magnetic from "@/components/Magnetic";
 
 export const metadata = {
-  title: "Reviews — US Web Studio",
+  title: "Reviews — AdvertisingLab",
   description:
     "What our clients say — real reviews from the brands we have helped grow.",
 };

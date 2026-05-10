@@ -22,7 +22,7 @@ export function generateMetadata({ params }) {
   const s = getAmazonBySlug(params.slug);
   if (!s) return { title: "Not found" };
   return {
-    title: `${s.name} — US Web Studio`,
+    title: `${s.name} — AdvertisingLab`,
     description: s.short,
   };
 }

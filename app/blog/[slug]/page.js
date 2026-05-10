@@ -20,7 +20,7 @@ export function generateMetadata({ params }) {
   const post = getPostBySlug(params.slug);
   if (!post) return { title: "Post not found" };
   return {
-    title: `${post.title} — US Web Studio`,
+    title: `${post.title} — AdvertisingLab`,
     description: post.excerpt,
   };
 }

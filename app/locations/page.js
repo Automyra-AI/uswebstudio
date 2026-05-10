@@ -10,7 +10,7 @@ import TiltCard from "@/components/TiltCard";
 import { LOCATIONS } from "@/lib/locations-data";
 
 export const metadata = {
-  title: "Locations — US Web Studio",
+  title: "Locations — AdvertisingLab",
   description:
     "Ecommerce expertise across the US and UAE — local insight, global standards.",
 };

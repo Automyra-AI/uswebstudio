@@ -6,7 +6,7 @@ import AboutValues from "@/components/AboutValues";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata = {
-  title: "About — US Web Studio",
+  title: "About — AdvertisingLab",
   description:
     "We turn neighbourhood businesses into digital powerhouses — websites, ads, and brand strategy made for ambitious local brands.",
 };

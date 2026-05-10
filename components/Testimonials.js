@@ -12,7 +12,7 @@ const TESTIMONIALS = [
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80",
     quote:
-      "Working with US Web Studio completely transformed our brand. Before, our marketing felt scattered and our ads were not bringing in real results. Their team rebuilt our social presence with a clean, professional look and managed our paid campaigns to bring in real clients. Within months our revenue grew well beyond what we expected, and we keep scaling. They didn't just run ads — they built a strategy that worked.",
+      "Working with AdvertisingLab completely transformed our brand. Before, our marketing felt scattered and our ads were not bringing in real results. Their team rebuilt our social presence with a clean, professional look and managed our paid campaigns to bring in real clients. Within months our revenue grew well beyond what we expected, and we keep scaling. They didn't just run ads — they built a strategy that worked.",
   },
   {
     name: "Sarah Mitchell",

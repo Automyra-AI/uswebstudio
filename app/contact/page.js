@@ -5,7 +5,7 @@ import BookACall from "@/components/BookACall";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata = {
-  title: "Contact — US Web Studio",
+  title: "Contact — AdvertisingLab",
   description:
     "Drop us a message or book a 30-minute strategy call. We are ready to build something great with you.",
 };

@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "US Web Studio — Empowering Local Brands with Digital Brilliance",
+  title: "AdvertisingLab — Grow, Convert, Scale Your Brand",
   description:
-    "Full-service digital studio for local brands — websites, social media, paid ads, and brand strategy that drives growth.",
+    "Full-service digital agency — websites, social media, paid ads, SEO, and Amazon growth, all engineered to scale ambitious brands.",
 };
 
 export default function RootLayout({ children }) {

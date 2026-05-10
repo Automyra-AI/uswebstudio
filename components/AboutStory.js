@@ -28,7 +28,7 @@ export default function AboutStory() {
           <div>
             <Reveal variant="up" duration={600}>
               <p className="text-brand-red font-semibold text-sm sm:text-base">
-                About US WebStudio
+                About AdvertisingLab
               </p>
             </Reveal>
 
@@ -36,7 +36,7 @@ export default function AboutStory() {
               <h2 className="mt-2 sm:mt-3 text-2xl sm:text-3xl lg:text-5xl font-bold text-navy-900 leading-[1.1]">
                 Hear what local businesses are saying about{" "}
                 <span className="bg-gradient-to-r from-navy-900 via-brand-red to-navy-900 bg-clip-text text-transparent animate-gradient">
-                  US WebStudio
+                  AdvertisingLab
                 </span>
                 .
               </h2>
@@ -48,7 +48,7 @@ export default function AboutStory() {
                 create meaningful results without big-agency price tags. Our
                 websites are not just visually polished — they are built to
                 convert, helping small businesses attract and close
-                high-value clients with confidence. At US WebStudio, we turn
+                high-value clients with confidence. At AdvertisingLab, we turn
                 lean resources into powerful digital impact.
               </p>
             </Reveal>
@@ -79,7 +79,7 @@ export default function AboutStory() {
                 <iframe
                   className="w-full h-full"
                   src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  title="About US WebStudio"
+                  title="About AdvertisingLab"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"

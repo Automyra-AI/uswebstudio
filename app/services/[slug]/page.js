@@ -17,7 +17,7 @@ export function generateMetadata({ params }) {
   const service = getServiceBySlug(params.slug);
   if (!service) return { title: "Service not found" };
   return {
-    title: `${service.name} — US Web Studio`,
+    title: `${service.name} — AdvertisingLab`,
     description: service.short,
   };
 }

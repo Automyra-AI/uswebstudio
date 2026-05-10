@@ -5,7 +5,7 @@ import ServiceRow from "@/components/ServiceRow";
 import { SERVICES } from "@/lib/services-data";
 
 export const metadata = {
-  title: "Services — US Web Studio",
+  title: "Services — AdvertisingLab",
   description:
     "AI SEO, design, development, paid ads, social, maintenance, migration, and Amazon — full-service growth for ambitious brands.",
 };
