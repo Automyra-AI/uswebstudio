@@ -4,7 +4,7 @@ import ProjectsHero from "@/components/ProjectsHero";
 import ProjectsGrid from "@/components/ProjectsGrid";
 
 export const metadata = {
-  title: "Projects — US Web Studio",
+  title: "Projects — AdvertisingLab",
   description:
     "A look at the brands we've helped grow — websites, ads, and campaigns built to drive real impact.",
 };

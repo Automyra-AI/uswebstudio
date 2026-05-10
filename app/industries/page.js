@@ -10,7 +10,7 @@ import TiltCard from "@/components/TiltCard";
 import Magnetic from "@/components/Magnetic";
 
 export const metadata = {
-  title: "Industries — US Web Studio",
+  title: "Industries — AdvertisingLab",
   description:
     "Industry-tailored ecommerce solutions for fashion, home goods, health, food, automotive, B2B, and more.",
 };

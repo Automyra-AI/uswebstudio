@@ -10,7 +10,7 @@ import TiltCard from "@/components/TiltCard";
 import { AMAZON_SERVICES } from "@/lib/amazon-data";
 
 export const metadata = {
-  title: "Amazon Services — US Web Studio",
+  title: "Amazon Services — AdvertisingLab",
   description:
     "Listings, ads, account health, and storefronts — full-service Amazon support for ambitious brands.",
 };

@@ -20,7 +20,7 @@ export function generateMetadata({ params }) {
   const loc = getLocationBySlug(params.slug);
   if (!loc) return { title: "Location not found" };
   return {
-    title: `Ecommerce Agency in ${loc.name} — US Web Studio`,
+    title: `Ecommerce Agency in ${loc.name} — AdvertisingLab`,
     description: loc.tagline,
   };
 }
