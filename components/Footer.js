@@ -165,13 +165,15 @@ export default function Footer() {
 
           <div className="flex items-center gap-3">
             {[
-              { i: "linkedin-in", label: "LinkedIn" },
-              { i: "instagram", label: "Instagram" },
-              { i: "facebook-f", label: "Facebook" },
+              { i: "linkedin-in", label: "LinkedIn", href: "https://www.linkedin.com/company/advertisinglab" },
+              { i: "instagram", label: "Instagram", href: "https://www.instagram.com/advertisinglab" },
+              { i: "facebook-f", label: "Facebook", href: "https://www.facebook.com/advertisinglab" },
             ].map((s) => (
               <a
                 key={s.i}
-                href="#"
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
                 aria-label={s.label}
                 className="w-11 h-11 rounded-md bg-navy-900 text-white flex items-center justify-center hover:bg-brand-red transition"
               >
@@ -187,8 +189,8 @@ export default function Footer() {
         <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-900/60">
           <p>© 2026 AdvertisingLab. All rights reserved.</p>
           <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-brand-red transition">Terms of Use</a>
-            <a href="#" className="hover:text-brand-red transition">Privacy Policy</a>
+            <a href="/terms" className="hover:text-brand-red transition">Terms of Use</a>
+            <a href="/privacy" className="hover:text-brand-red transition">Privacy Policy</a>
           </div>
         </div>
       </div>
