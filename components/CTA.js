@@ -3,73 +3,59 @@ import Magnetic from "./Magnetic";
 
 export default function CTA() {
   return (
-    <section id="contact" className="bg-navy-950 py-16 sm:py-20 lg:py-28">
+    <section id="contact" className="bg-navy-950 py-20 sm:py-24 lg:py-32 border-t border-white/[0.06]">
       <div className="container-x">
-        <Reveal variant="zoom" duration={800}>
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0e2150] via-navy-800 to-navy-900 border border-white/10 p-8 sm:p-10 lg:p-16 text-center">
-            {/* Animated background blobs */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -left-20 -top-20 w-60 sm:w-80 h-60 sm:h-80 rounded-full opacity-40 blur-2xl animate-float-slow"
-              style={{
-                background:
-                  "radial-gradient(circle, #e11d2a 0%, transparent 70%)",
-              }}
-            />
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -right-20 -bottom-20 w-60 sm:w-80 h-60 sm:h-80 rounded-full opacity-40 blur-2xl animate-float-slow-reverse"
-              style={{
-                background:
-                  "radial-gradient(circle, #1f7da6 0%, transparent 70%)",
-              }}
-            />
+        <div className="relative overflow-hidden rounded-2xl bg-navy-900/50 border border-white/[0.08] p-10 sm:p-14 lg:p-20">
+          {/* Single soft accent — far corner */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-32 -bottom-24 w-[420px] h-[420px] rounded-full opacity-40 blur-3xl"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(225,29,42,0.45) 0%, transparent 70%)",
+            }}
+          />
 
-            {/* Sweeping shimmer overlay */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl"
-            >
-              <span className="absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
-            </div>
+          <div className="relative max-w-3xl">
+            <Reveal variant="up" duration={700}>
+              <p className="text-[11px] font-semibold tracking-[0.3em] text-white/55 uppercase">
+                Let&apos;s talk
+              </p>
+            </Reveal>
 
-            <div className="relative">
-              <Reveal variant="up" delay={120} duration={700}>
-                <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight">
-                  Ready to{" "}
-                  <span className="bg-gradient-to-r from-white via-brand-red to-white bg-clip-text text-transparent animate-gradient">
-                    Elevate Your Brand?
-                  </span>
-                </h2>
-              </Reveal>
+            <Reveal variant="up" delay={100} duration={800}>
+              <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-[-0.02em] leading-[1.05]">
+                Have a project in mind?
+                <br />
+                <span className="text-white/55">We&apos;re ready when you are.</span>
+              </h2>
+            </Reveal>
 
-              <Reveal variant="up" delay={240} duration={700}>
-                <p className="mt-3 sm:mt-4 text-white/70 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg leading-relaxed">
-                  Let&apos;s build something extraordinary together. Tell us
-                  about your project and we&apos;ll get back within 24 hours.
-                </p>
-              </Reveal>
-
-              <Reveal variant="up" delay={360} duration={650}>
-                <Magnetic strength={0.4}>
+            <Reveal variant="up" delay={240} duration={750}>
+              <div className="mt-10 flex flex-wrap items-center gap-6">
+                <Magnetic strength={0.22}>
                   <a
                     href="/contact"
-                    className="mt-6 sm:mt-8 inline-flex items-center gap-2 bg-brand-red text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold relative overflow-hidden group/btn animate-glow"
+                    className="inline-flex items-center gap-3 bg-white text-navy-900 pl-7 pr-3 py-2 rounded-full font-medium text-sm group/btn hover:bg-brand-red hover:text-white transition-colors duration-300"
                   >
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-0 bg-white translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"
-                    />
-                    <span className="relative z-10 group-hover/btn:text-navy-900 transition-colors">
-                      Get In Touch
+                    Start the conversation
+                    <span className="inline-flex w-9 h-9 rounded-full bg-navy-900 text-white items-center justify-center group-hover/btn:bg-white group-hover/btn:text-brand-red transition-colors">
+                      <i className="fa-solid fa-arrow-right text-xs" />
                     </span>
-                    <i className="fa-solid fa-arrow-right relative z-10 group-hover/btn:text-navy-900 group-hover/btn:translate-x-1 transition-all" />
                   </a>
                 </Magnetic>
-              </Reveal>
-            </div>
+
+                <a
+                  href="mailto:hello@advertisinglab.com"
+                  className="text-sm text-white/70 hover:text-white transition relative group/mail"
+                >
+                  hello@advertisinglab.com
+                  <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-white/30 group-hover/mail:bg-white transition-colors" />
+                </a>
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

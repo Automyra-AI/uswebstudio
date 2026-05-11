@@ -1,99 +1,56 @@
 import HexIcon from "./HexIcon";
 import Reveal from "./Reveal";
-import Spotlight from "./Spotlight";
-import TiltCard from "./TiltCard";
-import Magnetic from "./Magnetic";
 
 const SERVICES = [
   {
     title: "Social Media Marketing",
-    desc: "Turn followers into fans with scroll-stopping content and strategy that connects.",
+    desc: "Content systems and strategy that turn audiences into customers.",
     image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=900&q=80",
-    layout: "image-top",
+      "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=1600&q=85",
     href: "/services/social-media",
   },
   {
     title: "Website Development",
-    desc: "Your digital storefront — built to impress, load fast, and turn clicks into customers.",
+    desc: "Fast, considered builds — designed to convert without compromise on craft.",
     image:
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&q=80",
-    layout: "content-top",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=85",
     href: "/services/development",
   },
   {
-    title: "Paid Ads",
-    desc: "Smart ads that reach the right people, at the right time — and bring real results.",
+    title: "Paid Media",
+    desc: "Performance campaigns tuned to your unit economics — not vanity metrics.",
     image:
-      "https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=900&q=80",
-    layout: "image-top",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=85",
     href: "/services/ppc",
   },
 ];
 
-function CardImage({ s }) {
-  return (
-    <div className="overflow-hidden aspect-[5/4] relative">
-      <img
-        src={s.image}
-        alt={s.title}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
-      />
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-white/15 to-transparent translate-x-[-100%] group-hover/card:translate-x-[100%] transition-transform duration-[1500ms]"
-      />
-    </div>
-  );
-}
-
-function CardInfo({ s, gradient }) {
-  return (
-    <div
-      className={`p-6 sm:p-7 flex-1 flex flex-col ${
-        gradient
-          ? "bg-gradient-to-b from-[#1d1042] via-[#3b0f24] to-[#5a0f1c]"
-          : ""
-      }`}
-    >
-      <h3 className="text-xl sm:text-2xl font-bold text-white">{s.title}</h3>
-      <p className="mt-3 text-sm sm:text-base text-white/75 leading-relaxed">
-        {s.desc}
-      </p>
-      <a
-        href={s.href}
-        className="mt-6 inline-flex items-center gap-2 text-white/90 font-semibold hover:text-brand-red transition self-end group/link"
-      >
-        Learn more
-        <i className="fa-solid fa-chevron-right text-xs transition-transform group-hover/link:translate-x-1" />
-      </a>
-    </div>
-  );
-}
-
 function ServiceCard({ s, idx }) {
   return (
-    <Reveal variant="up" delay={idx * 120} duration={700}>
-      <TiltCard max={6} scale={1.015} glare className="h-full">
-        <a
-          href={s.href}
-          className="block rounded-3xl overflow-hidden p-[2px] bg-gradient-to-b from-[#1f7da6]/70 via-[#1f7da6]/20 to-transparent group/card hover:from-brand-red/70 hover:via-brand-red/20 transition-all duration-500 h-full"
-        >
-          <div className="rounded-[22px] bg-navy-900 overflow-hidden flex flex-col h-full">
-            {s.layout === "image-top" ? (
-              <>
-                <CardImage s={s} />
-                <CardInfo s={s} />
-              </>
-            ) : (
-              <>
-                <CardInfo s={s} gradient />
-                <CardImage s={s} />
-              </>
-            )}
+    <Reveal variant="up" delay={idx * 90} duration={750}>
+      <a
+        href={s.href}
+        className="block group/card relative overflow-hidden rounded-2xl border border-white/[0.08] bg-navy-900/40 hover:border-white/20 transition-colors duration-500 h-full"
+      >
+        <div className="aspect-[4/3] overflow-hidden bg-navy-950">
+          <img
+            src={s.image}
+            alt={s.title}
+            className="w-full h-full object-cover opacity-85 group-hover/card:opacity-100 transition-opacity duration-700"
+          />
+        </div>
+        <div className="p-7">
+          <div className="flex items-start justify-between gap-4">
+            <h3 className="text-xl font-semibold text-white tracking-tight">
+              {s.title}
+            </h3>
+            <span className="inline-flex w-9 h-9 rounded-full border border-white/15 items-center justify-center text-white/70 group-hover/card:bg-white group-hover/card:text-navy-900 group-hover/card:border-white transition-colors duration-400 shrink-0">
+              <i className="fa-solid fa-arrow-right text-[11px]" />
+            </span>
           </div>
-        </a>
-      </TiltCard>
+          <p className="mt-3 text-sm text-white/55 leading-relaxed">{s.desc}</p>
+        </div>
+      </a>
     </Reveal>
   );
 }
@@ -102,63 +59,47 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative bg-navy-950 py-16 sm:py-20 lg:py-28 overflow-hidden"
+      className="relative bg-navy-950 py-20 sm:py-24 lg:py-32 overflow-hidden"
     >
-      {/* chevron pattern */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-[0.05]"
-        style={{
-          backgroundImage:
-            "linear-gradient(135deg, transparent 48%, white 48%, white 52%, transparent 52%)",
-          backgroundSize: "70px 70px",
-        }}
-      />
+      <div className="container-x relative">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14 sm:mb-20">
+          <div className="max-w-2xl">
+            <Reveal variant="up" duration={700}>
+              <div className="flex items-center gap-3 mb-6">
+                <HexIcon size={24} />
+                <span className="text-[11px] font-semibold tracking-[0.3em] text-white/55 uppercase">
+                  Capabilities
+                </span>
+              </div>
+            </Reveal>
 
-      <Spotlight color="rgba(225,29,42,0.16)" size={700}>
-        <div className="container-x relative">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 mb-10 sm:mb-14">
-            <div>
-              <Reveal variant="up" duration={600}>
-                <div className="flex items-center gap-3 mb-4">
-                  <HexIcon size={28} />
-                  <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-white/90">
-                    OUR SERVICES
-                  </span>
-                </div>
-              </Reveal>
-
-              <Reveal variant="up" delay={120} duration={750}>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.05]">
-                  Fuel Your Growth with
-                  <br className="hidden sm:block" />{" "}
-                  <span className="bg-gradient-to-r from-white via-brand-red to-white bg-clip-text text-transparent animate-gradient">
-                    Proven Strategies
-                  </span>
-                </h2>
-              </Reveal>
-            </div>
-
-            <Reveal variant="up" delay={250} duration={650}>
-              <Magnetic strength={0.3}>
-                <a
-                  href="/services"
-                  className="inline-flex items-center gap-2 bg-white text-navy-900 px-6 sm:px-7 py-3 rounded-full font-semibold hover:bg-brand-red hover:text-white transition self-start group/btn"
-                >
-                  View All Services
-                  <i className="fa-solid fa-arrow-right transition-transform group-hover/btn:translate-x-1" />
-                </a>
-              </Magnetic>
+            <Reveal variant="up" delay={100} duration={800}>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-[-0.02em] leading-[1.05]">
+                Strategy, craft, and growth — under one roof.
+              </h2>
             </Reveal>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
-            {SERVICES.map((s, idx) => (
-              <ServiceCard key={s.title} s={s} idx={idx} />
-            ))}
-          </div>
+          <Reveal variant="up" delay={220} duration={700}>
+            <a
+              href="/services"
+              className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white font-medium group/all"
+            >
+              <span className="relative">
+                Explore all services
+                <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-white/30 group-hover/all:bg-white transition-colors" />
+              </span>
+              <i className="fa-solid fa-arrow-right text-xs transition-transform group-hover/all:translate-x-1" />
+            </a>
+          </Reveal>
         </div>
-      </Spotlight>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+          {SERVICES.map((s, idx) => (
+            <ServiceCard key={s.title} s={s} idx={idx} />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
