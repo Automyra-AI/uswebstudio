@@ -1,4 +1,7 @@
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
+import GrainOverlay from "@/components/GrainOverlay";
 
 export const metadata = {
   title: "AdvertisingLab — Grow, Convert, Scale Your Brand",
@@ -21,7 +24,12 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
       </head>
-      <body className="bg-navy-950 text-white antialiased">{children}</body>
+      <body className="bg-navy-950 text-white antialiased site-cursor">
+        <SmoothScroll />
+        <CustomCursor />
+        {children}
+        <GrainOverlay opacity={0.05} />
+      </body>
     </html>
   );
 }

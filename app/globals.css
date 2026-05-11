@@ -16,6 +16,36 @@ html, body {
   font-family: "Inter", system-ui, sans-serif;
 }
 
+/* Hide system cursor when our custom cursor is active (hover-capable devices only) */
+@media (hover: hover) and (pointer: fine) {
+  .site-cursor,
+  .site-cursor * {
+    cursor: none !important;
+  }
+  .site-cursor input,
+  .site-cursor textarea,
+  .site-cursor select {
+    cursor: text !important;
+  }
+}
+
+/* Lenis smooth scroll — must allow normal scrolling on html/body */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 a { color: inherit; text-decoration: none; }
 
 .container-x {
