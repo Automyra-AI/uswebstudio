@@ -24,8 +24,7 @@ const TESTIMONIALS = [
   {
     name: "Michael Chen",
     role: "ProPaint Studio — Painting",
-    image:
-      "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1600&q=85",
+    image: "/images/testimonial-propaint.png",
     quote:
       "Branding, website, ads — they handled everything end to end. Our phones ring with high-intent leads now. They translated our customers into copy that converts.",
   },
