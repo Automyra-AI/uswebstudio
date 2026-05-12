@@ -5,15 +5,13 @@ const SERVICES = [
   {
     title: "Social Media Marketing",
     desc: "Content systems and strategy that turn audiences into customers.",
-    image:
-      "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=1600&q=85",
+    image: "/images/social-media-marketing.png",
     href: "/services/social-media",
   },
   {
     title: "Website Development",
     desc: "Fast, considered builds — designed to convert without compromise on craft.",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=85",
+    image: "/images/website-development.jpeg",
     href: "/services/development",
   },
   {
