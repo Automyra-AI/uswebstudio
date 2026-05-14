@@ -46,10 +46,10 @@ export default function CTA() {
                 </Magnetic>
 
                 <a
-                  href="mailto:hello@advertisinglab.com"
+                  href="mailto:hello@advertisingslabs.com"
                   className="text-sm text-white/70 hover:text-white transition relative group/mail"
                 >
-                  hello@advertisinglab.com
+                  hello@advertisingslabs.com
                   <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-white/30 group-hover/mail:bg-white transition-colors" />
                 </a>
               </div>

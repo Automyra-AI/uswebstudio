@@ -42,6 +42,31 @@ export default function ContactHero() {
               digital chapter together.
             </p>
           </Reveal>
+
+          <Reveal variant="up" delay={650} duration={700}>
+            <div className="mt-8 sm:mt-10 flex flex-col gap-3">
+              <a
+                href="tel:+13205440303"
+                className="group/c inline-flex items-center gap-3 text-white text-base sm:text-lg font-semibold w-fit"
+              >
+                <span className="inline-flex w-10 h-10 rounded-full border border-white/25 items-center justify-center group-hover/c:bg-white group-hover/c:text-navy-900 group-hover/c:border-white transition-colors">
+                  <i className="fa-solid fa-phone text-xs" />
+                </span>
+                <span className="tabular-nums tracking-tight">
+                  +1 (320) 544-0303
+                </span>
+              </a>
+              <a
+                href="mailto:hello@advertisingslabs.com"
+                className="group/c inline-flex items-center gap-3 text-white text-base sm:text-lg font-semibold w-fit"
+              >
+                <span className="inline-flex w-10 h-10 rounded-full border border-white/25 items-center justify-center group-hover/c:bg-white group-hover/c:text-navy-900 group-hover/c:border-white transition-colors">
+                  <i className="fa-solid fa-envelope text-xs" />
+                </span>
+                <span>hello@advertisingslabs.com</span>
+              </a>
+            </div>
+          </Reveal>
         </div>
 
         {/* RIGHT - two cards */}
@@ -54,8 +79,8 @@ export default function ContactHero() {
                 body="Let’s kick off your next digital project with some serious spark. Whether it is a website, ad campaign, or strategy session — we are ready to dive in."
                 primary={{ label: "Book A Call", href: "#book-a-call" }}
                 secondary={{
-                  label: "WhatsApp Now !",
-                  href: "https://wa.me/15555550123",
+                  label: "WhatsApp Now",
+                  href: "https://wa.me/13205440303",
                 }}
               />
             </TiltCard>

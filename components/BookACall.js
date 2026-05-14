@@ -1,7 +1,7 @@
 import Reveal from "./Reveal";
 
 export default function BookACall({
-  calendlyUrl = "https://calendly.com/d/cnwq-9wj-tqw/30min",
+  calendlyUrl = "https://cal.com/advertisingslabs/30min",
 }) {
   return (
     <section
