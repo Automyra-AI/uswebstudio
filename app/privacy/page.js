@@ -97,7 +97,7 @@ export default function PrivacyPage() {
             },
             {
               h: "9. Contact",
-              p: "Questions about this policy or your data? Email hello@advertisinglab.com.",
+              p: "Questions about this policy or your data? Email hello@advertisingslabs.com.",
             },
           ].map((b, i) => (
             <Reveal key={b.h} variant="up" delay={i * 80} duration={650}>

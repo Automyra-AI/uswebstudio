@@ -156,12 +156,21 @@ export default function Footer() {
             </span>
           </a>
 
-          <a
-            href="mailto:hello@advertisinglab.com"
-            className="text-navy-900/80 font-medium hover:text-brand-red transition"
-          >
-            hello@advertisinglab.com
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-sm">
+            <a
+              href="mailto:hello@advertisingslabs.com"
+              className="text-navy-900/80 font-medium hover:text-brand-red transition"
+            >
+              hello@advertisingslabs.com
+            </a>
+            <span aria-hidden="true" className="hidden sm:inline-block w-px h-4 bg-navy-900/15" />
+            <a
+              href="tel:+13205440303"
+              className="text-navy-900/80 font-medium hover:text-brand-red transition tabular-nums"
+            >
+              +1 (320) 544-0303
+            </a>
+          </div>
 
           <div className="flex items-center gap-3">
             {[

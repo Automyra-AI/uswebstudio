@@ -91,7 +91,7 @@ export default function TermsPage() {
             },
             {
               h: "8. Contact",
-              p: "Questions about these terms? Email hello@advertisinglab.com.",
+              p: "Questions about these terms? Email hello@advertisingslabs.com.",
             },
           ].map((b, i) => (
             <Reveal key={b.h} variant="up" delay={i * 80} duration={650}>

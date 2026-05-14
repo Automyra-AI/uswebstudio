@@ -79,8 +79,9 @@ lib/
 - **Copy**: each `lib/*-data.js` file holds the catalog for its section — edit in place
 - **Logo**: [components/Logo.js](components/Logo.js)
 - **Images**: currently loaded from Unsplash CDN. Replace with your own (or move to `/public/images/` and switch to `next/image`)
-- **Calendly**: pass your real URL via the `calendlyUrl` prop in [app/contact/page.js](app/contact/page.js)
-- **Email**: search for `hello@advertisinglab.com` and swap with your real address
+- **Calendar**: cal.com embed at `https://cal.com/advertisingslabs/30min` — change the `calendlyUrl` prop in [app/contact/page.js](app/contact/page.js) to swap
+- **Email**: `hello@advertisingslabs.com` (Footer, CTA, Terms, Privacy, ContactHero)
+- **Phone**: `+1 (320) 544-0303` — `tel:` link in Footer + ContactHero; WhatsApp link in ContactHero
 - **Form endpoint**: [components/ContactSection.js](components/ContactSection.js) currently logs to console — wire `submit()` to your API route or service (Resend, Formspree)
 
 ## Animation toolkit
