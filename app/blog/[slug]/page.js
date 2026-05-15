@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ export function generateMetadata({ params }) {
   const post = getPostBySlug(params.slug);
   if (!post) return { title: "Post not found" };
   return {
-    title: `${post.title} — AdvertisingLab`,
+    title: `${post.title} — AdvertisingsLabs`,
     description: post.excerpt,
   };
 }

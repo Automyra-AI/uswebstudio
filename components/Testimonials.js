@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import HexIcon from "./HexIcon";
@@ -11,7 +11,7 @@ const TESTIMONIALS = [
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=85",
     quote:
-      "AdvertisingLab rebuilt our social presence with a clean, professional look and managed our paid campaigns to bring in real clients. Within months our revenue grew well beyond what we expected.",
+      "AdvertisingsLabs rebuilt our social presence with a clean, professional look and managed our paid campaigns to bring in real clients. Within months our revenue grew well beyond what we expected.",
   },
   {
     name: "Sarah Mitchell",

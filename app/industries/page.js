@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HexIcon from "@/components/HexIcon";
@@ -10,7 +10,7 @@ import TiltCard from "@/components/TiltCard";
 import Magnetic from "@/components/Magnetic";
 
 export const metadata = {
-  title: "Industries — AdvertisingLab",
+  title: "Industries — AdvertisingsLabs",
   description:
     "Industry-tailored ecommerce solutions for fashion, home goods, health, food, automotive, B2B, and more.",
 };

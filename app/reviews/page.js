@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HexIcon from "@/components/HexIcon";
 import ContactSection from "@/components/ContactSection";
@@ -10,7 +10,7 @@ import CountUp from "@/components/CountUp";
 import { REVIEWS, getAverageRating } from "@/lib/reviews-data";
 
 export const metadata = {
-  title: "Reviews — AdvertisingLab",
+  title: "Reviews — AdvertisingsLabs",
   description:
     "What our clients say — real reviews from the brands we have helped grow.",
 };

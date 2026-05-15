@@ -1,4 +1,4 @@
-# AdvertisingLab — Marketing Agency Website
+﻿# AdvertisingsLabs — Marketing Agency Website
 
 A modern, animated marketing agency site built with Next.js 14, Tailwind, and a custom animation toolkit. Ready for one-click deploy on Vercel.
 

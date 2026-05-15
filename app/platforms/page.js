@@ -9,7 +9,7 @@ import TiltCard from "@/components/TiltCard";
 import { PLATFORMS } from "@/lib/platforms-data";
 
 export const metadata = {
-  title: "Platforms — AdvertisingLab",
+  title: "Platforms — AdvertisingsLabs",
   description:
     "Shopify, BigCommerce, Magento, WooCommerce, OpenCart, Volusion, Shift4Shop, Zen Cart, and Amazon — full-stack expertise across every major platform.",
 };

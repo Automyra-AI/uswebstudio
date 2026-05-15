@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ export function generateMetadata({ params }) {
   const s = getAmazonBySlug(params.slug);
   if (!s) return { title: "Not found" };
   return {
-    title: `${s.name} — AdvertisingLab`,
+    title: `${s.name} — AdvertisingsLabs`,
     description: s.short,
   };
 }

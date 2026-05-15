@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectDetail from "@/components/ProjectDetail";
@@ -16,7 +16,7 @@ export function generateMetadata({ params }) {
   const project = getProjectBySlug(params.slug);
   if (!project) return { title: "Project not found" };
   return {
-    title: `${project.title} — Case Study — AdvertisingLab`,
+    title: `${project.title} — Case Study — AdvertisingsLabs`,
     description: project.short,
   };
 }
