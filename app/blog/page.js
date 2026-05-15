@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HexIcon from "@/components/HexIcon";
@@ -9,9 +9,9 @@ import TiltCard from "@/components/TiltCard";
 import { POSTS, formatDate } from "@/lib/blog-data";
 
 export const metadata = {
-  title: "Blog — AdvertisingLab",
+  title: "Blog — AdvertisingsLabs",
   description:
-    "Insights on ecommerce, AI search, paid media, and growth — from the team at AdvertisingLab.",
+    "Insights on ecommerce, AI search, paid media, and growth — from the team at AdvertisingsLabs.",
 };
 
 export default function BlogIndexPage() {

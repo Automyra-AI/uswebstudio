@@ -4,7 +4,7 @@ export default function Logo({ className = "" }) {
   return (
     <Link
       href="/"
-      aria-label="AdvertisingLab — Home"
+      aria-label="AdvertisingsLabs — Home"
       className={`flex items-center gap-3 ${className}`}
     >
       <svg viewBox="0 0 40 44" width="40" height="44" aria-hidden="true">
@@ -30,8 +30,8 @@ export default function Logo({ className = "" }) {
       </svg>
       <span className="leading-tight">
         <span className="block text-xl font-extrabold tracking-tight">
-          Advertising
-          <span className="text-brand-red">Lab</span>
+          Advertisings
+          <span className="text-brand-red">Labs</span>
         </span>
         <span className="block text-[9px] font-bold tracking-[0.25em] text-white/80">
           GROW · CONVERT · SCALE

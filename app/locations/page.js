@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HexIcon from "@/components/HexIcon";
@@ -10,7 +10,7 @@ import TiltCard from "@/components/TiltCard";
 import { LOCATIONS } from "@/lib/locations-data";
 
 export const metadata = {
-  title: "Locations — AdvertisingLab",
+  title: "Locations — AdvertisingsLabs",
   description:
     "Ecommerce expertise across the US and UAE — local insight, global standards.",
 };

@@ -4,7 +4,7 @@ import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
 
 export const metadata = {
-  title: "AdvertisingLab — Grow, Convert, Scale Your Brand",
+  title: "AdvertisingsLabs — Grow, Convert, Scale Your Brand",
   description:
     "Full-service digital agency — websites, social media, paid ads, SEO, and Amazon growth, all engineered to scale ambitious brands.",
 };

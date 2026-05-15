@@ -16,7 +16,7 @@ export function generateMetadata({ params }) {
   const platform = getPlatformBySlug(params.slug);
   if (!platform) return { title: "Platform not found" };
   return {
-    title: `${platform.name} — AdvertisingLab`,
+    title: `${platform.name} — AdvertisingsLabs`,
     description: platform.short,
   };
 }

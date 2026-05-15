@@ -1,12 +1,12 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import HexIcon from "@/components/HexIcon";
 
 export const metadata = {
-  title: "Privacy Policy — AdvertisingLab",
+  title: "Privacy Policy — AdvertisingsLabs",
   description:
-    "How AdvertisingLab collects, uses, and protects your personal information.",
+    "How AdvertisingsLabs collects, uses, and protects your personal information.",
 };
 
 export default function PrivacyPage() {

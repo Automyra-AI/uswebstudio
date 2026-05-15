@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+﻿import { notFound } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,7 +20,7 @@ export function generateMetadata({ params }) {
   const loc = getLocationBySlug(params.slug);
   if (!loc) return { title: "Location not found" };
   return {
-    title: `Ecommerce Agency in ${loc.name} — AdvertisingLab`,
+    title: `Ecommerce Agency in ${loc.name} — AdvertisingsLabs`,
     description: loc.tagline,
   };
 }

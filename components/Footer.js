@@ -148,7 +148,7 @@ export default function Footer() {
             </span>
             <span className="leading-tight">
               <span className="block text-base font-extrabold tracking-tight text-navy-900">
-                Advertising<span className="text-brand-red">Lab</span>
+                Advertisings<span className="text-brand-red">Labs</span>
               </span>
               <span className="block text-[9px] font-bold tracking-[0.25em] text-navy-900/70">
                 GROW · CONVERT · SCALE
@@ -174,9 +174,9 @@ export default function Footer() {
 
           <div className="flex items-center gap-3">
             {[
-              { i: "linkedin-in", label: "LinkedIn", href: "https://www.linkedin.com/company/advertisinglab" },
-              { i: "instagram", label: "Instagram", href: "https://www.instagram.com/advertisinglab" },
-              { i: "facebook-f", label: "Facebook", href: "https://www.facebook.com/advertisinglab" },
+              { i: "linkedin-in", label: "LinkedIn", href: "https://www.linkedin.com/company/advertisingslabs" },
+              { i: "instagram", label: "Instagram", href: "https://www.instagram.com/advertisingslabs" },
+              { i: "facebook-f", label: "Facebook", href: "https://www.facebook.com/advertisingslabs" },
             ].map((s) => (
               <a
                 key={s.i}
@@ -196,7 +196,7 @@ export default function Footer() {
       {/* legal strip */}
       <div className="border-t border-navy-900/10">
         <div className="container-x py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-navy-900/60">
-          <p>© 2026 AdvertisingLab. All rights reserved.</p>
+          <p>© 2026 AdvertisingsLabs. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <a href="/terms" className="hover:text-brand-red transition">Terms of Use</a>
             <a href="/privacy" className="hover:text-brand-red transition">Privacy Policy</a>

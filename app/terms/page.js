@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import HexIcon from "@/components/HexIcon";
 
 export const metadata = {
-  title: "Terms of Use — AdvertisingLab",
-  description: "Terms of Use governing your access to and use of the AdvertisingLab website and services.",
+  title: "Terms of Use — AdvertisingsLabs",
+  description: "Terms of Use governing your access to and use of the AdvertisingsLabs website and services.",
 };
 
 export default function TermsPage() {
@@ -63,7 +63,7 @@ export default function TermsPage() {
           {[
             {
               h: "1. Acceptance",
-              p: "By accessing or using the AdvertisingLab website (the “Site”) or any service we provide, you agree to be bound by these Terms of Use. If you do not agree, please do not use the Site.",
+              p: "By accessing or using the AdvertisingsLabs website (the “Site”) or any service we provide, you agree to be bound by these Terms of Use. If you do not agree, please do not use the Site.",
             },
             {
               h: "2. Services",
@@ -71,7 +71,7 @@ export default function TermsPage() {
             },
             {
               h: "3. Intellectual property",
-              p: "All content on the Site — including text, graphics, logos, and code — is owned by AdvertisingLab or its licensors and is protected by applicable intellectual property laws. You may not reproduce or redistribute Site content without prior written permission.",
+              p: "All content on the Site — including text, graphics, logos, and code — is owned by AdvertisingsLabs or its licensors and is protected by applicable intellectual property laws. You may not reproduce or redistribute Site content without prior written permission.",
             },
             {
               h: "4. User submissions",
@@ -83,7 +83,7 @@ export default function TermsPage() {
             },
             {
               h: "6. Disclaimer and liability",
-              p: "The Site is provided “as is” and “as available”. We do not warrant that the Site will be uninterrupted, error-free, or secure. To the maximum extent permitted by law, AdvertisingLab is not liable for any indirect, incidental, or consequential damages arising from your use of the Site.",
+              p: "The Site is provided “as is” and “as available”. We do not warrant that the Site will be uninterrupted, error-free, or secure. To the maximum extent permitted by law, AdvertisingsLabs is not liable for any indirect, incidental, or consequential damages arising from your use of the Site.",
             },
             {
               h: "7. Changes",
