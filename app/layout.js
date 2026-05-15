@@ -2,6 +2,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import GrainOverlay from "@/components/GrainOverlay";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export const metadata = {
   title: "AdvertisingsLabs — Grow, Convert, Scale Your Brand",
@@ -29,6 +30,10 @@ export default function RootLayout({ children }) {
         <CustomCursor />
         {children}
         <GrainOverlay opacity={0.05} />
+        <FloatingWhatsApp
+          phone="13205440303"
+          message="Hi AdvertisingsLabs, I'd like to discuss a project."
+        />
       </body>
     </html>
   );
